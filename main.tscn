@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://cni42fnhuogux"]
+
+[ext_resource type="Script" uid="uid://bvm4bsfkmor0n" path="res://main.gd" id="1_ig7tw"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="xp" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 6.0
+offset_right = 472.0
+offset_bottom = 29.0
+
+[node name="level" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 33.0
+offset_right = 73.0
+offset_bottom = 23.0
+
+[node name="attack" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 117.0
+offset_right = 157.0
+offset_bottom = 23.0
+
+[node name="health" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 223.0
+offset_right = 263.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 443.0
+offset_right = 546.0
+offset_bottom = 474.0
+text = "add 50 xp"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
